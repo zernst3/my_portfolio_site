@@ -1,0 +1,115 @@
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+}
+
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+    background:rgba(104, 104, 104, 1);
+    z-index: 10;    
+}
+
+@media (max-height: 960px) {
+  .vertical-nav {
+    overflow-y: scroll;
+  }
+}
+
+#my-image {
+  margin-top: 5px;;
+  max-width: 90%;
+  max-height: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.my_image_background {
+  background-color: rgba(83, 83, 83, 0.9);
+  margin: auto;
+  width: 80%;
+}
+
+.nav-link {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  height: 4rem;
+  margin: auto;
+  top: 50%;
+  background: transparent;
+}
+
+#sidebarCollapse.active {
+  width: 100%;
+  margin: 0;
+  transition: all 0.4s;
+}
+
+#sidebarCollapse {
+  width: 100%;
+  margin: 0;
+  transition: all 0.4s;
+  background-color: rgb(230, 230, 230);
+  padding: 1rem;
+}
+
+#sidebartoggle {
+  position: fixed;
+  padding: 1rem;
+  z-index: 10;
+  }
+
+  #sidebar.active {
+    margin-left: -17rem;
+  }
+  
+  @media (max-width: 768px) {
+ 
+    #content {
+      width: 100%;
+      margin: 0;
+    }
+
+    .vertical-nav {
+      width: 17rem;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s;
+      background:rgba(104, 104, 104, 0.9);
+      z-index: 10;
+    }
+    
+    #sidebarCollapse {
+      width: calc(100% - 17rem);
+      margin-left: 17rem;
+      transition: all 0.4s;
+      background-color: rgb(230, 230, 230);
+      padding: 1rem;
+    }
+  }  
+  
+.nav-item {
+    background: transparent;
+}
+
+#email {
+	color: white;
+}

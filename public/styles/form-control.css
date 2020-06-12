@@ -1,0 +1,46 @@
+.form-control {
+    border: 1px solid gray;
+    outline: none;
+    text-align: center;
+    color: black;
+}
+
+/* .contact-form {
+    justify-content: center;
+    background-color: rgba(255, 255, 255);
+    padding: 1rem;
+    box-shadow: 2px 2px gray;
+    border-radius: 5px;
+    border: 1px solid black;
+	width: 500px;
+} */
+
+.form_control {
+    max-width: 750px;
+    margin: auto;
+    padding: 2rem;
+}
+
+form .message {
+    width: 100%;
+    height: 8rem;
+}
+
+form .submit {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 1.5rem;
+    background:rgba(63, 144, 158, 0.6);
+    color: rgb(255, 255, 255);
+    width: 150px;
+    height: 5rem;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin: 0 auto;
+    border-radius: 25px;
+    border: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black !important; 
+    opacity: 1 !important; /* Firefox */
+  }

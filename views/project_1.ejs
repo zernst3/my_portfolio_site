@@ -1,0 +1,124 @@
+<%- include ('partials/header'); %>
+<title>My Simple CRM Project</title>
+<link rel="stylesheet" type="text/css" href="/styles/project_1.css">
+
+<div id="project_1">
+	<div class="page_width">
+        <div class="container-fluid">
+            <h1 class="Section_Title pt-5">My Simple CRM</h1>
+            <div class="row">
+                <div class="col-xl-6">
+                    <img src="/images/crm_images/Dashboard.png" class="card-img-top" alt="Project 1">
+                </div>
+                <div class="col-xl-6">
+                    <div class="explanation">
+                        <h1 class="Section_Title">About This Project:</h1>  
+                        <p>This full-stack CRM application was what I decided to create as my final project for CS50x.  
+                            Although this started out as a simple client-tracking system, my ambition for this project quickly gew.
+                            I decided that I wanted to create four CRUD databases that would be connected to each other, as well as one "Users" database.
+                            Over time I decided to add many more features, as well as focus on many little details.                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+             
+           <div class="row">               
+               <div class="col-xl-6 order-xl-1 order-2">
+                    <div class="explanation">
+                        <h1 class="Section_Title">User Permissions:</h1>  
+                        <p>One of the features I wanted this application to have is the ability to add permissions to each user.   
+                            Therefore, the administrators of the application can decide which users have the permission to perform various tasks.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-6 order-xl-2 order-1">
+                    <img src="/images/crm_images/User Permissions.png" class="card-img-top" alt="Project 1"> 
+               </div>
+           </div>
+
+           <div class="row">
+                <div class="col-xl-6">
+                    <img src="/images/crm_images/Add Ticket.png" class="card-img-top" alt="Project 1">
+                </div>
+                <div class="col-xl-6">                          
+                    <div class="explanation">
+                        <h1 class="Section_Title">Ticketting:</h1>  
+                        <p>The ticketting system within this web application is a method to keep track of important tasks that the business needs to complete.
+                            As you can see from the form, when created, a user is able to asign the task to another user.
+                            Once this form is completed, an email is sent to the user who created the task, as well as the one who it is assigned to.
+                            This functionality is accomplished through the nodemailer module.
+                        </p>
+                        <p>Other documents in other collections can be added to as well, and as with the ticketting system, these forms are usually pre-filled with associated data.
+                        </p>
+                    </div>
+                </div>
+            </div>      
+            
+            <div class="row">               
+                <div class="col-xl-6 order-xl-1 order-2">
+                     <div class="explanation">
+                         <h1 class="Section_Title">Information Tables:</h1>  
+                         <p>All of the collections stored in the database can be viewed within a table.  
+                             This section fetures "DataTables," which is a plug-in for JQuery.
+                             By using this plugin, many features are automatically added to this application page, such as a seach and sort feature.
+                         </p>
+                     </div>
+                 </div>
+                 <div class="col-xl-6 order-xl-2 order-1">
+                    <img src="/images/crm_images/Clients.png" class="card-img-top" alt="Project 1">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-6">
+                    <img src="/images/crm_images/Client Information.png" class="card-img-top" alt="Project 1">
+                </div>
+                <div class="col-xl-6">                          
+                    <div class="explanation">
+                        <h1 class="Section_Title">Information Cards:</h1>  
+                        <p>Information cards are the visual display of information contained within individual documents within the database.
+                            In many cases, these cards display real-time information about a related database.  
+                            As the associated databases are updated, these cards are updated as well with the new information.
+                        </p>
+                    </div>
+                </div>
+            </div>     
+            
+            <div class="row">               
+                <div class="col-xl-6 order-xl-1 order-2">
+                     <div class="explanation">
+                         <h1 class="Section_Title">Editing:</h1>  
+                         <p>As with any CRUD application, the information stored in the database can be updated.
+                             These editing forms are pre-filled with the information stored in the document.
+                             As with the create form, associated databases can be selected.
+                         </p>
+                     </div>
+                 </div>
+                 <div class="col-xl-6 order-xl-2 order-1">
+                    <img src="/images/crm_images/Edit Transaction.png" class="card-img-top" alt="Project 1">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="iframe_container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/z4eN17EzBuo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-xl-6">                          
+                    <div class="explanation">
+                        <h1 class="Section_Title">More Information:</h1>  
+                        <h5 class="Section_Title"><a href="https://github.com/zernst3/my-simple-crm">Please click here to view the source code on github</a>
+                        </h5>
+                        <h5 class="Section_Title"><a href="#">Please click here to view the deployed demo</a>
+                        </h5>
+                    </div>
+                </div>
+            </div> 
+           
+        </div>        
+    </div>
+    
+</div>
+
+<%- include ('partials/footer'); %>

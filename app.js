@@ -1,0 +1,89 @@
+const express = require("express"),
+app 	      = express(),
+bodyParser    = require("body-parser"),
+flash		  = require("connect-flash"),
+nodemailer 	  = require('nodemailer');
+
+//telling express to serve public directory where our CSS is based
+app.use(express.static(__dirname + "/public"));
+
+//telling it to look out for ejs
+app.set("view engine", "ejs");
+
+// use bodyParser
+app.use(bodyParser.urlencoded({extended: true}));
+
+require('dotenv').config();
+
+// Use Express Session
+app.use(require("express-session")({
+	secret: "Sleeping with a full-moon blanket",
+	resave: false,
+	saveUninitialized: false
+}));
+
+// Use Flash
+app.use(flash());
+
+// Use Current Flashing Information
+app.use(function(req, res, next){
+	res.locals.success = req.flash("success");
+	next();
+});
+
+// 1. Transporter
+let transporter = nodemailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: process.env.EMAIL,
+		pass: process.env.PASSWORD
+	}
+});
+
+// ========================================= Home Page =============================================
+
+app.get("/", function(req, res){
+	res.render("index");
+});
+
+app.get("/resume", function(req, res){
+	res.render("resume");
+});
+
+app.post("/send_email", function(req, res){
+	try {
+		// 2.	
+		let mailOptions = {
+			from: req.body.email,
+			to: 'zernst3@live.com',
+			subject: 'New Inquery from your webpage',
+			html: "<h1>Information</h1>" +
+				  "<p><strong>From: </strong>" + req.body.name + ", " + req.body.email + "</p>" +
+				  "<p>" + req.body.message + "</p>"
+		}
+		
+		// 3.		
+		transporter.sendMail(mailOptions, function(err, data) {
+			if (err){
+				console.log(err);
+			} else {
+				console.log("Email Sent Successfully");
+			}
+		});
+	}
+	catch (err) {console.log(err);}	
+	req.flash("success", "Email Sent");
+	res.redirect("/");
+});
+
+app.get("/project_1", function(req, res){
+	res.render("project_1");
+});
+
+app.get("*", function(req, res){ 
+	res.send("404 Not Found!");
+});
+
+app.listen(3000, function() { 
+  console.log('Server listening on port 3000'); 
+});

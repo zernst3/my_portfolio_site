@@ -1,0 +1,36 @@
+.row {
+    padding: 0%;    
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.col-xl-6 {
+    padding: 1%;
+    margin-top: 1rem;
+    background-color: white;
+}
+
+.explanation {
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.explanation .Section_Title {
+    color: black;
+}
+
+.iframe_container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .iframe_container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

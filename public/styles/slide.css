@@ -1,0 +1,12 @@
+/* .slide_left {
+	transform: translateX(-20%) scale(0.95);
+}
+
+.slide_right {
+	transform: translateX(20%) scale(0.95);
+}
+
+.active {
+	opacity: 1;
+	transform: translateX(0%) scale(1);
+} */

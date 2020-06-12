@@ -1,0 +1,74 @@
+.dropdown_parent {
+	padding-bottom: 2vh;
+    position: relative;
+}
+
+/* .dropdown_parent:hover .dropdown {
+    padding: 3%;
+    display: block;
+    transition-property: all;
+    transition-duration: 1s;
+    max-height: 100%;
+}
+ */
+.dropdown, .dropdown1 {
+    padding: 0%;
+    overflow: hidden;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    max-height: 0%;
+    font-size: 100%;
+    text-align: center;
+    border-radius: 5px;
+    transition: all .9s;
+    color: black;
+}
+
+.portfolio_icon_plus, .portfolio_icon_plus1{
+	margin: 1rem;
+	position: absolute;
+	right: 0px;
+	color: black;
+	font-size: 1.5rem;
+	display: none;
+	line-height: 0;
+	padding: 1rem;
+	transition-property: all;
+    transition-duration: 1s;
+	background-color: rgba(255, 255, 255, 0.6)
+}
+
+.dropdown_on {
+	padding: 3%;
+    display: block;
+    transition-property: all;
+    transition-duration: 1s;
+    max-height: 100%;
+	z-index: 0;
+}
+/* 
+.dropdown_off {
+	display: none;
+	transition-property: all;
+    transition-duration: 1s;
+} */
+
+.portfolio_icon_minus, .portfolio_icon_minus1 {
+	margin: 1rem;
+	position: absolute;
+	right: 0px;
+	color: black;
+	font-size: 1.5rem;
+	display: none;
+	line-height: 0;
+	padding: 1rem;
+	transition-property: all;
+    transition-duration: 1s;
+	background-color: rgba(255, 255, 255, 0.6)
+}
+
+.portfolio_icon_on {
+	display: block;
+	z-index: 1
+}
