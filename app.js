@@ -2,7 +2,8 @@ const express = require("express"),
 app 	      = express(),
 bodyParser    = require("body-parser"),
 flash		  = require("connect-flash"),
-nodemailer 	  = require('nodemailer');
+nodemailer 	  = require('nodemailer'),
+cookieSession = require('cookie-session');
 
 //telling express to serve public directory where our CSS is based
 app.use(express.static(__dirname + "/public"));
@@ -15,12 +16,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 require('dotenv').config();
 
-// Use Express Session
-app.use(require("express-session")({
-	secret: "Sleeping with a full-moon blanket",
-	resave: false,
-	saveUninitialized: false
-}));
+// Cookie Session
+app.use(cookieSession({
+	name: 'session',
+	keys: "Sleeping with a full-moon blanket",
+  
+	// Cookie Options
+	maxAge: 24 * 60 * 60 * 1000 // 24 hours
+  }))
 
 // Use Flash
 app.use(flash());
@@ -108,6 +111,6 @@ app.get("*", function(req, res){
 	res.send("404 Not Found!");
 });
 
-app.listen(3000, function() { 
-  console.log('Server listening on port 3000'); 
-});
+app.listen(process.env.PORT || 5000, function() { 
+	console.log('Server listening on port'); 
+  });

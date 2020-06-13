@@ -60,12 +60,6 @@ hr {
 	}
 }
 
-@media (max-width: 1150px) {
-	#About_Me_Paragraph {
-		/* overflow-y: scroll; */
-	}
-}
-
 #About_Me {
 	min-height: 100%;
 	padding-top: 5%;
