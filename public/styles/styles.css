@@ -23,11 +23,11 @@ hr {
 
 /* About Me */
 
-#About_Me {
+#about_me {
 	background-color: white;
 }
 
-#About_Me_Paragraph {
+#about_me_paragraph {
     /* max-height: 50vh; */
     /* background-color: white; */
     /* border-radius: 25px;
@@ -36,15 +36,15 @@ hr {
     width: auto;
 }
 
-#About_Me_Paragraph ul {
+#about_me_paragraph ul {
 	padding-left: 0;
 }
 
-#About_Me_Paragraph h3 {
+#about_me_paragraph h3 {
 	text-align: center;
 }
 
-#About_Me_Paragraph img {
+#about_me_paragraph img {
 	max-height: 100px;
 	width: auto;
     display: block;
@@ -54,13 +54,13 @@ hr {
 }
 
 @media (max-width: 768px){
-	#About_Me_Paragraph img{
+	#about_me_paragraph img{
 		max-width: 150px;
 		height: auto;
 	}
 }
 
-#About_Me {
+#about_me {
 	min-height: 100%;
 	padding-top: 5%;
 	padding-bottom: 5%;
@@ -103,7 +103,7 @@ hr {
     color: white;
 }
 
-#About_Me .Section_Title {
+#about_me .Section_Title {
 	color: black;
 }
 
@@ -170,7 +170,7 @@ hr {
 
 /* Contact */
 
-#Contact_Me {
+#contact_me {
 	background-color: white;
 	min-height: 100%;
 	padding-top: 5%;
@@ -178,7 +178,7 @@ hr {
     margin-bottom: 5%
 }
 
-#Contact_Me .Section_Title {
+#contact_me .Section_Title {
 	color: black;
 }
 
