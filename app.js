@@ -72,6 +72,30 @@ app.post("/send_email", function(req, res){
 		});
 	}
 	catch (err) {console.log(err);}	
+
+	try {
+		// 2.	
+		let mailOptions = {
+			from: 'zernst3@live.com',
+			to: req.body.email,
+			subject: 'Thank You for your Email',
+			html: "<p>Hello " + req.body.name + ",</p>" +
+				  "<p>Thank you for contacting me on my website!  I will be in contact with you soon to discuss your inquery.  Have a great day!</p>" +
+				  "<p>Sincerely,</p>" +
+				  "<p>Zachary Ernst<p>"
+		}
+		
+		// 3.		
+		transporter.sendMail(mailOptions, function(err, data) {
+			if (err){
+				console.log(err);
+			} else {
+				console.log("Email Sent Successfully");
+			}
+		});
+	}
+	catch (err) {console.log(err);}	
+
 	req.flash("success", "Email Sent");
 	res.redirect("/");
 });
