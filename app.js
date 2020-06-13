@@ -3,7 +3,7 @@ app 	      = express(),
 bodyParser    = require("body-parser"),
 flash		  = require("connect-flash"),
 nodemailer 	  = require('nodemailer'),
-cookieSession = require('cookie-session');
+session		  = require("express-session");
 
 //telling express to serve public directory where our CSS is based
 app.use(express.static(__dirname + "/public"));
@@ -16,14 +16,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 require('dotenv').config();
 
-// Cookie Session
-app.use(cookieSession({
-	name: 'session',
-	keys: "Sleeping with a full-moon blanket",
-  
-	// Cookie Options
-	maxAge: 24 * 60 * 60 * 1000 // 24 hours
-  }))
+app.use(session ({
+	secret: "Sleeping with a full-moon blanket",
+	cookie: {
+		maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
+	},
+	resave: true,
+	saveUninitialized: true
+}));
 
 // Use Flash
 app.use(flash());
