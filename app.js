@@ -22,7 +22,7 @@ app.use(session ({
 		maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
 	},
 	resave: false,
-	saveUninitialized: false
+	saveUninitialized: true
 }));
 
 // Use Flash
@@ -46,11 +46,26 @@ let transporter = nodemailer.createTransport({
 // ========================================= Home Page =============================================
 
 app.get("/", function(req, res){
+	try {
+		// 2.	
+		let mailOptions = {
+			from: req.body.email,
+			to: 'zernst3@live.com',
+			subject: 'New visit to your webpage',
+			html: "<h1>New Visit</h1>" +
+		}
+		
+		// 3.		
+		transporter.sendMail(mailOptions, function(err, data) {
+			if (err){
+				console.log(err);
+			} else {
+				console.log("Email Sent Successfully");
+			}
+		});
+	}
+	catch (err) {console.log(err);}	
 	res.render("index");
-});
-
-app.get("/resume", function(req, res){
-	res.render("resume");
 });
 
 app.post("/send_email", function(req, res){
