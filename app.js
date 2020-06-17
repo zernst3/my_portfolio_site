@@ -52,7 +52,7 @@ app.get("/", function(req, res){
 			from: req.body.email,
 			to: 'zernst3@live.com',
 			subject: 'New visit to your webpage',
-			html: "<h1>New Visit</h1>" +
+			html: "<h1>New Visit</h1>"
 		}
 		
 		// 3.		
