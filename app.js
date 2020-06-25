@@ -122,6 +122,10 @@ app.get("/project_1", function(req, res){
 	res.render("project_1");
 });
 
+app.get("/project_2", function(req, res){
+	res.render("project_2");
+});
+
 app.get("*", function(req, res){ 
 	res.send("404 Not Found!");
 });
