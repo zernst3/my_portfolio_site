@@ -6,9 +6,10 @@ body, html {
     height: 100%;
 	width: 100%;
     font-family: 'Baloo Bhaina 2', Regular;
-    background: rgb(181,181,181);
-    background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(158,158,158,1) 51%, rgba(181,181,181,1) 100%);
-    background-repeat: no-repeat;
+    /* background: rgb(181,181,181); */
+    background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80");
+    /* background: linear-gradient(90deg, rgba(181,181,181,1) 0%, rgba(158,158,158,1) 51%, rgba(181,181,181,1) 100%);
+    background-repeat: no-repeat; */
     background-attachment: fixed;
     background-position: center;
 	scroll-behavior: smooth;
